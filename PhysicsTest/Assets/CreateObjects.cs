@@ -8,9 +8,7 @@ public class CreateObjects : MonoBehaviour {
 	public GameObject spawnui;
 	public PrimitiveType PrimToSpawn;
 	// Use this for initialization
-	void Start () {
-		
-	}
+
 	
 	// Update is called once per frame
 	void Update () 
@@ -31,7 +29,9 @@ public class CreateObjects : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast (createCam.transform.position, createCam.transform.forward, out hit, RangeInt) && PrimToSpawn != null) 
 		{
-			GameObject.CreatePrimitive (PrimToSpawn);
+			 GameObject gams = GameObject.CreatePrimitive(PrimToSpawn);
+			gams.transform.position = hit.point;
+			gams.AddComponent<Rigidbody>();
 		}
 
 

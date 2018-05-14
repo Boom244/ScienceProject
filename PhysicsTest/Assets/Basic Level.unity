@@ -1685,7 +1685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1730779398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2045,48 +2045,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1865471497}
---- !u!1001 &1925106158
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4761745273648140, guid: b344090c9a5582e4bbb05cb1ee451c17, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -176.04855
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761745273648140, guid: b344090c9a5582e4bbb05cb1ee451c17, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 44.582485
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761745273648140, guid: b344090c9a5582e4bbb05cb1ee451c17, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 537.49524
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761745273648140, guid: b344090c9a5582e4bbb05cb1ee451c17, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761745273648140, guid: b344090c9a5582e4bbb05cb1ee451c17, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761745273648140, guid: b344090c9a5582e4bbb05cb1ee451c17, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761745273648140, guid: b344090c9a5582e4bbb05cb1ee451c17, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761745273648140, guid: b344090c9a5582e4bbb05cb1ee451c17, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b344090c9a5582e4bbb05cb1ee451c17, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1952599740
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,4 +2496,5 @@ MonoBehaviour:
   cylinderButton: {fileID: 2059384515}
   SphereButton: {fileID: 1748868898}
   CapsuleButton: {fileID: 733545486}
+  exitButton: {fileID: 876211026}
   createObjects: {fileID: 445708281}
