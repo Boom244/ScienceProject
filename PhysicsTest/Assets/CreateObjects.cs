@@ -21,6 +21,8 @@ public class CreateObjects : MonoBehaviour {
 
 		if (Input.GetButtonDown("Fire2"))
 		{
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
 			spawnui.gameObject.SetActive(true);
 		}
 	}
