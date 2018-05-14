@@ -4,10 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PhysobjectManager : MonoBehaviour {
-	public Button cubeButton;
-	public Button cylinderButton;
-	public Button SphereButton;
-	public Button CapsuleButton;
+	public Button cubeButton,cylinderButton,SphereButton,CapsuleButton;
 	public CreateObjects createObjects;
 	// Use this for initialization
 	void Start () {
