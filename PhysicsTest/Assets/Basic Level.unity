@@ -145,6 +145,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &36139855 stripped
+CharacterController:
+  m_PrefabParentObject: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 2}
+  m_PrefabInternal: {fileID: 644616011}
 --- !u!1 &39699822
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +497,7 @@ MonoBehaviour:
   RangeInt: 20
   spawnui: {fileID: 1730779397}
   PrimToSpawn: 0
+  cc: {fileID: 36139855}
 --- !u!1 &532457729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,3 +2504,4 @@ MonoBehaviour:
   CapsuleButton: {fileID: 733545486}
   exitButton: {fileID: 876211026}
   createObjects: {fileID: 445708281}
+  cc: {fileID: 0}

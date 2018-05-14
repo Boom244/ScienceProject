@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class PhysobjectManager : MonoBehaviour {
 	public Button cubeButton,cylinderButton,SphereButton,CapsuleButton, exitButton;
 	public CreateObjects createObjects;
+	public FirstPersonController cc;
 
 	// Use this for initialization
 	void Start () {
@@ -27,37 +29,32 @@ public class PhysobjectManager : MonoBehaviour {
 	void ClosePanel()
 	{
 		gameObject.SetActive (false);
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		cc.m_MouseLook.lockCursor = true;
 	}
 	void ChangeCylinder()
 	{
 		createObjects.PrimToSpawn = PrimitiveType.Cylinder;
 		gameObject.SetActive (false);
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		cc.m_MouseLook.lockCursor = true;
 
 	}
 	void ChangeSphere()
 	{
 		createObjects.PrimToSpawn = PrimitiveType.Sphere;
 		gameObject.SetActive (false);
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		cc.m_MouseLook.lockCursor = true;
 	}
 	void ChangeCapsule()
 	{
 		createObjects.PrimToSpawn = PrimitiveType.Capsule;
 		gameObject.SetActive (false);
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		cc.m_MouseLook.lockCursor = true;
 	}
 	void ChangeCube()
 	{
 		createObjects.PrimToSpawn = PrimitiveType.Cube;
 		gameObject.SetActive (false);
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		cc.m_MouseLook.lockCursor = true;
 	}
 
 }

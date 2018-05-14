@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 public class CreateObjects : MonoBehaviour {
 	public Camera createCam; 
 	public float RangeInt = 20f;
 	public GameObject spawnui;
 	public PrimitiveType PrimToSpawn;
-	// Use this for initialization
+	public CharacterController cc = GetComponent (typeof(CharacterController)) as CharacterController;
 
+	// Use this for initialization
+	void Start()
+	{
+		
+	}
 	
 	// Update is called once per frame
 	void Update () 
@@ -19,8 +25,8 @@ public class CreateObjects : MonoBehaviour {
 
 		if (Input.GetButtonDown("Fire2"))
 		{
-			Cursor.visible = true;
-			Cursor.lockState = CursorLockMode.None;
+			cc.enabled = false;
+			cc.GetComponent<FirstPersonController> ().enabled = false;
 			spawnui.gameObject.SetActive(true);
 		}
 	}
@@ -31,7 +37,7 @@ public class CreateObjects : MonoBehaviour {
 		{
 			 GameObject gams = GameObject.CreatePrimitive(PrimToSpawn);
 			gams.transform.position = hit.point;
-			gams.AddComponent<Rigidbody>();
+			gams.AddComponent<Rigidbody>();	
 		}
 
 
