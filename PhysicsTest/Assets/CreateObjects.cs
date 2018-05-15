@@ -8,7 +8,6 @@ public class CreateObjects : MonoBehaviour {
 	public float RangeInt = 20f;
 	public GameObject spawnui;
 	public PrimitiveType PrimToSpawn;
-	public CharacterController cc = GetComponent (typeof(CharacterController)) as CharacterController;
 
 	// Use this for initialization
 	void Start()
@@ -25,9 +24,10 @@ public class CreateObjects : MonoBehaviour {
 
 		if (Input.GetButtonDown("Fire2"))
 		{
-			cc.enabled = false;
-			cc.GetComponent<FirstPersonController> ().enabled = false;
+			///Reactivates selection GUI, and then frees the cursor
 			spawnui.gameObject.SetActive(true);
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
 		}
 	}
 	public void SpawnObj() 
@@ -35,8 +35,10 @@ public class CreateObjects : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast (createCam.transform.position, createCam.transform.forward, out hit, RangeInt) && PrimToSpawn != null) 
 		{
+			
+			///Adds object to the scene at boosted position
 			 GameObject gams = GameObject.CreatePrimitive(PrimToSpawn);
-			gams.transform.position = hit.point;
+			gams.transform.position = new Vector3 (hit.point.x, hit.point.y + 1 / 2	, hit.point.z);
 			gams.AddComponent<Rigidbody>();	
 		}
 

@@ -29,32 +29,42 @@ public class PhysobjectManager : MonoBehaviour {
 	void ClosePanel()
 	{
 		gameObject.SetActive (false);
-		cc.m_MouseLook.lockCursor = true;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+	
 	}
 	void ChangeCylinder()
 	{
 		createObjects.PrimToSpawn = PrimitiveType.Cylinder;
 		gameObject.SetActive (false);
-		cc.m_MouseLook.lockCursor = true;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+	
 
 	}
 	void ChangeSphere()
 	{
 		createObjects.PrimToSpawn = PrimitiveType.Sphere;
 		gameObject.SetActive (false);
-		cc.m_MouseLook.lockCursor = true;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+
 	}
 	void ChangeCapsule()
 	{
 		createObjects.PrimToSpawn = PrimitiveType.Capsule;
 		gameObject.SetActive (false);
-		cc.m_MouseLook.lockCursor = true;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+
 	}
 	void ChangeCube()
 	{
 		createObjects.PrimToSpawn = PrimitiveType.Cube;
 		gameObject.SetActive (false);
-		cc.m_MouseLook.lockCursor = true;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+
 	}
 
 }
